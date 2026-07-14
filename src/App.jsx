@@ -108,7 +108,7 @@ function App() {
         <section className="seccion">
           <div className="contenedor">
             <img
-              src="/public/banner.jpg"
+              src="/banner.jpg"
               alt="Banner clima indicadores Iquique"
               className="app-banner"
             />
