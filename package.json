@@ -1,0 +1,19 @@
+{
+  "name": "mi-portafolio-react",
+  "private": true,
+  "version": "0.0.0",
+  "homepage": "https://github.com/mandubaritoo/Proyecto-React",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
