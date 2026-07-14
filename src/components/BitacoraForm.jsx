@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 
+const hoy = new Date().toISOString().split("T")[0];
+
 function BitacoraForm({ onGuardar, bitacoraEditando, onCancelarEdicion }) {
   const [formData, setFormData] = useState({
-    fecha: "",
+    fecha: hoy,
     nickname: "",
     comentario: "",
   });
@@ -14,7 +16,7 @@ function BitacoraForm({ onGuardar, bitacoraEditando, onCancelarEdicion }) {
       setFormData(bitacoraEditando);
     } else {
       setFormData({
-        fecha: "",
+        fecha: hoy,
         nickname: "",
         comentario: "",
       });
@@ -51,7 +53,8 @@ function BitacoraForm({ onGuardar, bitacoraEditando, onCancelarEdicion }) {
     if (!formData.comentario.trim()) {
       nuevosErrores.comentario = "El comentario es obligatorio.";
     } else if (formData.comentario.trim().length < 10) {
-      nuevosErrores.comentario = "El comentario debe tener al menos 10 caracteres.";
+      nuevosErrores.comentario =
+        "El comentario debe tener al menos 10 caracteres.";
     }
 
     return nuevosErrores;
@@ -70,7 +73,7 @@ function BitacoraForm({ onGuardar, bitacoraEditando, onCancelarEdicion }) {
     onGuardar(formData);
 
     setFormData({
-      fecha: "",
+      fecha: hoy,
       nickname: "",
       comentario: "",
     });
@@ -95,6 +98,8 @@ function BitacoraForm({ onGuardar, bitacoraEditando, onCancelarEdicion }) {
               name="fecha"
               value={formData.fecha}
               onChange={handleChange}
+              min="2010-01-01"
+              max={hoy}
             />
             {errores.fecha && <p className="error-texto">{errores.fecha}</p>}
           </div>
