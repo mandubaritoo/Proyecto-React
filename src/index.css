@@ -402,9 +402,3 @@ body.tema-claro .mensaje-exito {
   color: #14532d;
   border-color: #22c55e;
 }
-.app-banner {
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  margin-bottom: 1rem;
-}
