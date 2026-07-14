@@ -105,6 +105,16 @@ function App() {
       <Header temaOscuro={temaOscuro} cambiarTema={cambiarTema} />
 
       <main>
+        <section className="seccion">
+          <div className="contenedor">
+            <img
+              src="/banner.jpg"
+              alt="Banner clima indicadores Iquique"
+              className="app-banner"
+            />
+          </div>
+        </section>
+
         <Hero saludo={saludo} />
         <WeatherSection />
         <IndicatorsSection />
